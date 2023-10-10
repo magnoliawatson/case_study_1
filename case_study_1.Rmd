@@ -1,0 +1,36 @@
+---
+title: "case_study"
+output: html_document
+date: "2023-10-10"
+---
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library(p8105.datasets)
+
+data(nyc_airbnb)
+
+nyc=airbnb = 
+  nyc_airbnb %>% 
+  rename(borough = neighbourhood_group) %>% 
+  mutate(stars = review_scores_location / 2)
+```
+
+## brainstorm questions
+
+- where are airnbnbs most expensive 
+  - borough? neighborhood?
+- how long are airbnbs active
+  - are airbnbs illegal and do they get shut down
+- which units have the most avaliabilty 
+- how is review score impacted by location
+- how many apts are run by one host
+  - does that affect price
+  - does that vary by neighborhood
+- where are airbnbs
+  - borough? neighborhood?
+  - latitude, longitude 
+
+## attempt solutions
